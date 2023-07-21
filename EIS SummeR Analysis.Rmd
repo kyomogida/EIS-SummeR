@@ -1,0 +1,59 @@
+---
+title: "EIS SummeR Course"
+author: "Kyle S. Yomogida"
+date: "`r Sys.Date()`"
+output: html_document
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r}
+library(table1)
+library(tidyverse)
+```
+
+### Exercise Prompt -- Taken from SAS File
+
+Exercise:
+
+*Dataset: nat2018samp_exercise.csv;* Variables (range): id (generated):
+ID MAGER: Mother's Single Years of Age (12-50) M_Ht_In: Mother's Height
+in Total Inches (30-78) bmi: BMI (13-69.9, 99.9) PWgt_R: Pre-pregnancy
+Weight Recode (75-375)\
+DWgt_R: Delivery Weight Recode (100-400) WTGAIN: Weight Gain (0-98)
+WTGAIN_REC: Weight Gain Recode (1-5) SEX: Sex of Infant (M/F) DBWT:
+Birth Weight - Detail in Grams (0227-8165)
+
+;
+
+\*See
+<https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Dataset_Documentation/DVS/natality/UserGuide2018-508.pdf>
+for more variable information;
+
+```         
+*1) Read in the dataset nat2018samp_exercise.csv and explore variables;
+
+
+
+*2) Inspect dataset, keeping in mind types of potential errors:
+    -out of range: do any records have values that are out of expected range?
+    -errors of logic or consistency: are there any mismatches in variable values?
+    -outliers/fringeliers: are there any (really/kind of) unusual values?
+    -duplication: any records duplicated?;
+
+
+
+*3) If you have time, correct any errors you find (you will need to make assumptions here) and 
+    save your clean dataset for analysis;
+```
+
+## Prompt 1
+
+*1) Read in the dataset nat2018samp_exercise.csv and explore variables*
+
+```{r}
+table1(~ ., data = nat2018samp_exercise)
+
+
+```
